@@ -24,7 +24,7 @@ public:
         menu(); //call to main function to load after executing the constructr
     }
 
-    ~ManageMenu(){} //de
+    ~ManageMenu(){}
 };
 
 class Customer
@@ -42,13 +42,13 @@ public:
             cout << "\nEnter Customer ID: ";
             cin >> cusID;
             cout << "Enter Name: ";
-            getline(cin,name);
+            cin >> name;
             cout << "Enter Age: ";
             cin >> age;
             cout << "Enter Mobile Number: ";
             cin >> mobileNo;
             cout << "Address: ";
-            getline(cin, address);
+            cin >> address;
             cout << "Gender: ";
             cin >> gender;
         }
@@ -58,7 +58,7 @@ public:
     }
     void showDetails() //function to show old customer records
     {
-        ifstream in("old-customers.txt"); //an input stream
+        ifstream in("old-customers.txt");
         {
             if(!in)
             {
@@ -87,7 +87,7 @@ public:
     void cabDetails()
     {
         cout << "We collaborated with fastest, safest, and smartest cab service arround the country" << endl;
-        cout << "-----------KUBER Cabs-----------\n" << endl;
+        cout << "-----------ABC Cabs-----------\n" << endl;
         cout << "1. Rent a Standard Cab - Rs.25 for 1KM" << endl;
         cout << "2. Rent a Luxury Cab - Rs.35 per 1KM" << endl;
 
@@ -176,7 +176,7 @@ public:
 
     void hotels()
     {
-        string hotelNo[] = {"Porsche", "Yayu", "ElephantBay"};
+          string hotelNo[] = {"Rosche", "Yayu", "ElephantBay"};
         for(int a = 0; a < 3; a++)
         {
             cout << (a+1) <<". Hotel " << hotelNo[a] << endl;
@@ -190,18 +190,18 @@ public:
         system("CLS");
 
         if(choiceHotel == 1){
-            cout << "-------WELCOME TO ROSCHE INN-------\n" << endl;
+            cout << "-------WELCOME TO HOTEL ROSCHE-------\n" << endl;
 
             cout << "The Garden, food and beverage. Enjoy all you can drink, Stay cool and get chilled in the summer sun." << endl;
 
-            cout << "Packages offered by ROSCHE INN:\n" << endl;
+            cout << "Packages offered by Rosche:\n" << endl;
 
             cout << "1. Standard Pack" << endl;
             cout << "\tAll basic facilities you need just for: Rs.5000.00" << endl;
             cout << "2. Premium Pack" << endl;
             cout << "\tEnjoy Premium: Rs.10000.00" << endl;
             cout << "3. Luxury Pack" << endl;
-            cout << "\tLive a Luxury at ROSCHE INN: Rs.15000.00" << endl;
+            cout << "\tLive a Luxury at Rosche: Rs.15000.00" << endl;
 
 
             cout << "\nPress another key to back or\nEnter Package number you want to book: ";
@@ -209,17 +209,17 @@ public:
 
             if (packChoice1 == 1){
                 hotelCost = 5000.00;
-                cout << "\nYou have successfully booked Standard Pack at ROSCHE INN" << endl;
+                cout << "\nYou have successfully booked Standard Pack at Rosche" << endl;
                 cout << "Goto Menu and take the receipt" << endl;
             }
             else if (packChoice1 == 2){
                 hotelCost = 10000.00;
-                cout << "\nYou have successfully booked Premium Pack at ROSCHE INN" << endl;
+                cout << "\nYou have successfully booked Premium Pack at Rosche" << endl;
                 cout << "Goto Menu and take the receipt" << endl;
             }
             else if (packChoice1 == 3){
                 hotelCost = 15000.00;
-                cout << "\nYou have successfully booked Luxury Pack at ROSCHE INN" << endl;
+                cout << "\nYou have successfully booked Luxury Pack at Rosche" << endl;
                 cout << "Goto Menu to take the receipt" << endl;
             }
             else{
@@ -230,7 +230,7 @@ public:
 
             }
 
-            cout << "Press 1 to Redirect Main Menu: ";
+            cout << "\nPress 1 to Redirect Main Menu: ";
             cin >> gotoMenu;
             system("CLS");
             if(gotoMenu == 1){
@@ -241,11 +241,11 @@ public:
             }
         }
         else if(choiceHotel == 2){
-            cout << "-------WELCOME TO HOTEL Yayu-------" << endl;
+            cout << "-------WELCOME TO HOTEL CHOICEYOU-------\n" << endl;
 
             cout << "Swimming Pool | Free WiFi | Family Rooms \n Fitness Center | Restaurant & Bar" << endl;
 
-            cout << "Packages Offered by Yayu:\n" << endl;
+              cout << "Packages Offered by Yayu:\n" << endl;
 
             cout << "1. Family Pack" << endl;
             cout << "\t Rs.15000.00 for a day" << endl;
@@ -259,17 +259,17 @@ public:
 
             if (packChoice1 == 1){
                 hotelCost = 15000.00;
-                cout << "You have successfully booked Family Pack at Yayu" << endl;
+                  cout << "You have successfully booked Family Pack at Yayu" << endl;
                 cout << "Goto Menu and take the receipt" << endl;
             }
             else if (packChoice1 == 2){
                 hotelCost = 10000.00;
-                cout << "You have successfully booked Couple Pack at Yayu" << endl;
+                  cout << "You have successfully booked Couple Pack at Yayu" << endl;
                 cout << "Goto Menu and take the receipt" << endl;
             }
             else if (packChoice1 == 3){
                 hotelCost = 5000.00;
-                cout << "You have successfully booked Single Pack at Yayu" << endl;
+                  cout << "You have successfully booked Single Pack at Yayu" << endl;
                 cout << "Goto Menu and take the receipt" << endl;
             }
             else{
@@ -290,7 +290,7 @@ public:
             }
         }
         else if(choiceHotel == 3){
-            cout << "-------WELCOME TO HOTEL ELEPHANTBAY-------" << endl;
+            cout << "-------WELCOME TO HOTEL ELEPHANTBAY-------\n" << endl;
             cout << "Set in tropical gardens on the banks of the Maha Oya river While Seeing Elephants" << endl;
             cout << "Amazing offer in this summer: Rs.5000.00 for a one day!!!" << endl;
 
@@ -338,7 +338,7 @@ public:
     {
         ofstream outf("receipt.txt"); //receipt for bought items
         {
-            outf << "--------ABC Travel Agency--------" << endl;
+            outf << "--------SUNRISE Travel Agency--------" << endl;
             outf << "-------------Receipt-------------" << endl;
             outf << "_________________________________" << endl;
 
@@ -380,12 +380,12 @@ void menu() //menu function contain main menu
     int mainChoice;
     int inChoice;
     int gotoMenu;
-    cout << "\t\t      * ABC Travels *\n" << endl;
+    cout << "\t\t      * SUNRISE Travels *\n" << endl;
     cout << "-------------------------Main Menu--------------------------" << endl;
 
     cout << "\t _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ " << endl;
     cout << "\t|\t\t\t\t\t|" << endl;
-    //cout << "\t|\tAgency System Management -> 0" << endl;
+
     cout << "\t|\tCustomer Management -> 1\t|" << endl;
     cout << "\t|\tCabs Management     -> 2\t|" << endl;
     cout << "\t|\tBookings Management -> 3\t|" << endl;
@@ -404,9 +404,6 @@ void menu() //menu function contain main menu
     Booking a4;
     Chargers a5;
 
-    /*if(mainChoice == 0){
-
-    }*/
     if(mainChoice == 1){
         cout << "------Customers------\n" << endl;
         cout << "1. Enter New Customer"<< endl;
