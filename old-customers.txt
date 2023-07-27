@@ -1,0 +1,7 @@
+
+Customer ID: 101
+Name: Devanshi
+Age: 18
+Mobile Number: 986412367
+Address: xyz
+Gender: nagar
